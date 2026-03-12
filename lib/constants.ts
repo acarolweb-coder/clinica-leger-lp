@@ -1,0 +1,115 @@
+export const SITE = {
+  name: "Dr. Roberto Chacur",
+  clinic: "Clínica Leger",
+  title: "Harmonização Glútea — Dr. Roberto Chacur | Clínica Leger",
+  description:
+    "Mais contorno, mais projeção e bumbum liso, sem cirurgia. Técnicas avançadas realizadas pelo Dr. Roberto Chacur, referência internacional em contorno corporal.",
+} as const;
+
+export const WHATSAPP = {
+  number: "5511999999999",
+  message: "Olá! Gostaria de saber mais sobre a Harmonização Glútea.",
+  get url() {
+    return `https://wa.me/${this.number}?text=${encodeURIComponent(this.message)}`;
+  },
+} as const;
+
+export const CLINICS = [
+  {
+    city: "São Paulo",
+    neighborhood: "Moema",
+    address: "Alameda dos Maracatins, 1435 - sala 801",
+    region: "Moema, São Paulo - SP",
+    image:
+      "https://www.robertochacur.com/wp-content/uploads/2022/10/RECEPCAO-sp-LEGER.jpg",
+    mapUrl:
+      "https://maps.google.com/?q=Alameda+dos+Maracatins,+1435,+Moema,+São+Paulo",
+  },
+  {
+    city: "Rio de Janeiro",
+    neighborhood: "Barra da Tijuca",
+    address: "Av. João Cabral de Mello Neto, 850 - bloco 3, sala 1603",
+    region: "Barra da Tijuca, Rio de Janeiro - RJ",
+    image:
+      "https://www.robertochacur.com/wp-content/uploads/2022/10/RECEPCAO-RJ-LEGER.jpg",
+    mapUrl:
+      "https://maps.google.com/?q=Av+João+Cabral+de+Mello+Neto,+850,+Barra+da+Tijuca,+Rio+de+Janeiro",
+  },
+] as const;
+
+export const CITIES = ["São Paulo", "Rio de Janeiro", "Porto Alegre"] as const;
+
+export const PRESS_ITEMS = [
+  {
+    outlet: "Terra",
+    headline:
+      "Tratamento parcialmente concluído! Conheça o procedimento realizado por Isabelle Nogueira",
+    person: "Isabelle Nogueira",
+    image:
+      "https://midias.correio24horas.com.br/2024/12/05/isabelle-nogueira-2526945.png",
+  },
+  {
+    outlet: "O Globo",
+    headline:
+      "Juju Salimeni faz novo procedimento no bumbum e aprova resultado: 'Muito mais bonito, pele lisinha'",
+    person: "Juju Salimeni",
+    image:
+      "https://s2-oglobo.glbimg.com/DcHHxXBjjDkeT7XkFgxdiDPbB-0=/0x0:3264x2001/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/c/E/hBwatATQqe7m6tVlBFSw/juju-5-1-.jpg",
+  },
+  {
+    outlet: "IstoÉ",
+    headline:
+      "Em busca da pele perfeita, Giovanna Antonelli se rende a inovador procedimento estético",
+    person: "Giovanna Antonelli",
+    image:
+      "https://jeffersondealmeida.com.br/wp-content/uploads/2024/06/unnamed-2024-06-05T143011.294.jpg",
+  },
+] as const;
+
+export const NAV_LINKS = [
+  { label: "Resultados", href: "#resultados" },
+  { label: "Técnicas", href: "#tecnicas" },
+  { label: "Dr. Chacur", href: "#dr-chacur" },
+  { label: "Clínicas", href: "#clinicas" },
+  { label: "FAQ", href: "#faq" },
+] as const;
+
+export const FAQS = [
+  {
+    question: "Quem pode realizar o procedimento?",
+    answer:
+      "O tratamento é indicado para mulheres e homens que desejam melhorar o contorno, a projeção ou a textura da pele do bumbum. Pode ser uma boa opção para quem se incomoda com falta de volume, celulite, flacidez, depressões laterais ou assimetrias na região. Durante a consulta, o Dr. Roberto Chacur avalia a anatomia da paciente, a qualidade da pele e a estrutura muscular do glúteo para entender quais técnicas são mais indicadas para cada caso.",
+  },
+  {
+    question: "O procedimento dói?",
+    answer:
+      "Os procedimentos são realizados em consultório, com anestesia local, o que torna o tratamento bastante confortável para a maioria dos pacientes. Pode haver um leve desconforto durante ou após o procedimento, mas ele costuma ser temporário e bem tolerado.",
+  },
+  {
+    question: "O procedimento é seguro?",
+    answer:
+      "Sim. Quando realizado por um médico experiente e com técnica adequada, o procedimento é considerado seguro. Na Clínica Leger são utilizados protocolos médicos rigorosos, ambiente clínico apropriado e produtos aprovados pela ANVISA, sempre respeitando as características individuais de cada paciente.",
+  },
+  {
+    question: "Quais produtos são utilizados?",
+    answer:
+      "Podem ser utilizados produtos absorvíveis ou permanentes, sempre aprovados pela ANVISA. A escolha do material é feita durante a consulta, levando em consideração as características da paciente, seus objetivos e a indicação médica do Dr. Roberto Chacur.",
+  },
+  {
+    question: "Qual o tempo de recuperação?",
+    answer:
+      "O retorno às atividades do dia a dia costuma ser rápido. Após a GoldIncision, a paciente já sai da clínica utilizando uma bermuda específica e recebe um kit de cuidados pós-procedimento. É necessário evitar atividades físicas por alguns dias. No caso do preenchimento glúteo, atividades normais como trabalhar, dirigir ou cuidar da rotina costumam ser mantidas.",
+  },
+  {
+    question: "Pode viajar após realizar o tratamento?",
+    answer:
+      "Muitas pacientes realizam o tratamento e retornam para suas cidades ou países após o procedimento. A Clínica Leger atende frequentemente pacientes de outras regiões e até de fora do Brasil. As orientações podem variar de acordo com cada caso, por isso é importante conversar com o médico durante a avaliação.",
+  },
+  {
+    question: "Como é feita a avaliação?",
+    answer:
+      "A avaliação pode ser realizada presencialmente na clínica ou de forma online. O Dr. Roberto Chacur analisa fatores como formato do glúteo, qualidade da pele, presença de celulite, proporções corporais e os objetivos da paciente. A partir dessa análise, é elaborado um planejamento personalizado, podendo incluir preenchimento glúteo, GoldIncision ou a combinação das duas técnicas.",
+  },
+] as const;
+
+export const FOOTER_DISCLAIMER = `Entre as possíveis complicações da harmonização glútea podemos citar cicatriz, desconforto, dor local, e inchaço (edema) durante, após e até tardiamente ao procedimento, além de alteração de sensibilidade e manchas, por um período de tempo variável, após o procedimento. Há ainda a possibilidade de surgimento de nódulos palpáveis, raramente visíveis, bem como infecção na área tratada, sendo essa complicação tratada com uso de antibióticos e curativos locais. Existe também a possibilidade do surgimento de telangiectasias (vasos/vasinhos) decorrente do volume de preenchimento implantado, assim como hematoma, que pode ocorrer por acúmulo de sangue no local da aplicação. Existe também uma chance rara de isquemia e necrose, com a perda de pele/de tecido, sendo que essas complicações têm mais chance de ocorrer em fumantes. Podem ocorrer ainda assimetria, entre os dois lados do corpo, porém, em geral, é discreta e corrigida com uma segunda aplicação ou "retoque". Em alguns casos pode ocorrer o surgimento de estrias na região tratada devido às características fisiológicas do paciente e volume de preenchimento implantado.`;
