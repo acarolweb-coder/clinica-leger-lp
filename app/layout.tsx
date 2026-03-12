@@ -14,6 +14,23 @@ export const metadata: Metadata = {
     "contorno corporal",
     "celulite",
   ],
+  openGraph: {
+    title: "Harmonização Glútea — Dr. Roberto Chacur | Clínica Leger",
+    description:
+      "Mais contorno, mais projeção e bumbum liso, sem cirurgia. Técnicas avançadas realizadas pelo Dr. Roberto Chacur.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Clínica Leger",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Harmonização Glútea — Dr. Roberto Chacur",
+    description:
+      "Mais contorno, mais projeção e bumbum liso, sem cirurgia.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

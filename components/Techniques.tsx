@@ -10,7 +10,7 @@ const techniques = [
     title: "Preenchimento Glúteo",
     badge: null,
     description:
-      "Consiste na aplicação de substâncias biocompatíveis, aprovadas pela ANVISA, em pontos estratégicos do bumbum para harmonizar o formato e melhorar a projeção de forma natural. O procedimento é realizado em consultório e com anestesia local. É totalmente personalizado e começa com uma análise da anatomia da paciente.",
+      "Consiste na aplicação de substâncias biocompatíveis, aprovadas pela ANVISA, em pontos estratégicos do bumbum para harmonizar o formato e melhorar a projeção de forma natural. O procedimento é realizado em consultório e com anestesia local. É totalmente personalizado e começa com uma análise da anatomia da paciente e da escuta de suas queixas, permitindo ao Dr. Roberto Chacur definir o planejamento mais adequado de contorno e proporção corporal.",
     indications: [
       "Mais projeção e volume no bumbum",
       "Melhor definição do contorno glúteo",
@@ -23,7 +23,7 @@ const techniques = [
     title: "GoldIncision",
     badge: "Premiado internacionalmente",
     description:
-      "Método avançado para o tratamento da celulite, criado pelo Dr. Roberto Chacur e premiado internacionalmente como melhor tratamento corporal do mundo. Consiste na liberação das fibras que puxam a pele para dentro e formam as depressões da celulite, associada ao bioestímulo de colágeno.",
+      "Método avançado para o tratamento da celulite, criado pelo Dr. Roberto Chacur e premiado internacionalmente como melhor tratamento corporal do mundo. Consiste na liberação das fibras que puxam a pele para dentro e formam as depressões da celulite, associada ao bioestímulo de colágeno para melhorar a textura e a qualidade da pele. Realizada em consultório, com anestesia local, permite suavizar irregularidades de forma segura e personalizada.",
     indications: [
       "Reduzir celulites de todos os graus",
       "Melhorar a textura da pele do bumbum",

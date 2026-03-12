@@ -78,7 +78,7 @@ export const FAQS = [
   {
     question: "Quem pode realizar o procedimento?",
     answer:
-      "O tratamento é indicado para mulheres e homens que desejam melhorar o contorno, a projeção ou a textura da pele do bumbum. Pode ser uma boa opção para quem se incomoda com falta de volume, celulite, flacidez, depressões laterais ou assimetrias na região. Durante a consulta, o Dr. Roberto Chacur avalia a anatomia da paciente, a qualidade da pele e a estrutura muscular do glúteo para entender quais técnicas são mais indicadas para cada caso.",
+      "O tratamento é indicado para mulheres e homens que desejam melhorar o contorno, a projeção ou a textura da pele do bumbum. Pode ser uma boa opção para quem se incomoda com falta de volume, celulite, flacidez, depressões laterais ou assimetrias na região. Durante a consulta, o Dr. Roberto Chacur avalia a anatomia da paciente, a qualidade da pele e a estrutura muscular do glúteo para entender quais técnicas são mais indicadas para cada caso. Pacientes saudáveis e com expectativas realistas em relação aos resultados costumam ser boas candidatas ao tratamento.",
   },
   {
     question: "O procedimento dói?",
@@ -98,7 +98,7 @@ export const FAQS = [
   {
     question: "Qual o tempo de recuperação?",
     answer:
-      "O retorno às atividades do dia a dia costuma ser rápido. Após a GoldIncision, a paciente já sai da clínica utilizando uma bermuda específica e recebe um kit de cuidados pós-procedimento. É necessário evitar atividades físicas por alguns dias. No caso do preenchimento glúteo, atividades normais como trabalhar, dirigir ou cuidar da rotina costumam ser mantidas.",
+      "O retorno às atividades do dia a dia costuma ser rápido. Após a GoldIncision, a paciente já sai da clínica utilizando uma bermuda específica e recebe um kit de cuidados pós-procedimento. É necessário evitar atividades físicas por alguns dias, seguindo as orientações médicas. No caso do preenchimento glúteo, pode ser necessário evitar esforços físicos intensos por um período, mas atividades normais como trabalhar, dirigir ou cuidar da rotina costumam ser mantidas.",
   },
   {
     question: "Pode viajar após realizar o tratamento?",
@@ -112,4 +112,4 @@ export const FAQS = [
   },
 ] as const;
 
-export const FOOTER_DISCLAIMER = `Entre as possíveis complicações da harmonização glútea podemos citar cicatriz, desconforto, dor local, e inchaço (edema) durante, após e até tardiamente ao procedimento, além de alteração de sensibilidade e manchas, por um período de tempo variável, após o procedimento. Há ainda a possibilidade de surgimento de nódulos palpáveis, raramente visíveis, bem como infecção na área tratada, sendo essa complicação tratada com uso de antibióticos e curativos locais. Existe também a possibilidade do surgimento de telangiectasias (vasos/vasinhos) decorrente do volume de preenchimento implantado, assim como hematoma, que pode ocorrer por acúmulo de sangue no local da aplicação. Existe também uma chance rara de isquemia e necrose, com a perda de pele/de tecido, sendo que essas complicações têm mais chance de ocorrer em fumantes. Podem ocorrer ainda assimetria, entre os dois lados do corpo, porém, em geral, é discreta e corrigida com uma segunda aplicação ou "retoque". Em alguns casos pode ocorrer o surgimento de estrias na região tratada devido às características fisiológicas do paciente e volume de preenchimento implantado.`;
+export const FOOTER_DISCLAIMER = `Entre as possíveis complicações da harmonização glútea podemos citar cicatriz, desconforto, dor local, e inchaço (edema) durante, após e até tardiamente ao procedimento, além de alteração de sensibilidade e manchas, por um período de tempo variável, após o procedimento. Há ainda a possibilidade de surgimento de nódulos palpáveis, raramente visíveis, bem como infecção na área tratada, sendo essa complicação tratada com uso de antibióticos e curativos locais. Existe também a possibilidade do surgimento de telangiectasias (vasos/vasinhos) decorrente do volume de preenchimento implantado, assim como hematoma, que pode ocorrer por acúmulo de sangue no local da aplicação. Existe também uma chance rara de isquemia e necrose, com a perda de pele/de tecido, sendo que essas complicações têm mais chance de ocorrer em fumantes. Podem ocorrer ainda assimetria, entre os dois lados do corpo, porém, em geral, é discreta e corrigida com uma segunda aplicação ou "retoque". Em alguns casos pode ocorrer o surgimento de estrias na região tratada devido às características fisiológicas do paciente e volume de preenchimento implantado. Há casos, na literatura médica, de vasculite e embolia pulmonar independente do produto utilizado.`;

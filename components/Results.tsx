@@ -20,7 +20,7 @@ export default function Results() {
           <h2 className="text-4xl md:text-5xl font-extralight text-white leading-[1.1]">
             Resultados reais{" "}
             <span className="font-bold bg-gradient-to-r from-[#8C4821] via-[#B6A095] to-[#8C4821] bg-clip-text text-transparent">
-              da Clínica Leger
+              de pacientes da Clínica Leger
             </span>
           </h2>
           <p className="text-white/30 text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed">

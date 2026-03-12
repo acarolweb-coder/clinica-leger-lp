@@ -48,7 +48,7 @@ export default function Hero() {
         >
           <span className="w-12 h-px bg-[#8C4821]/40" />
           <span className="text-[10px] tracking-[0.4em] uppercase text-[#B6A095]/60 font-medium">
-            Contorno corporal avançado
+            Dr. Roberto Chacur
           </span>
           <span className="w-12 h-px bg-[#8C4821]/40" />
         </motion.div>

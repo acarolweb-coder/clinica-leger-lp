@@ -5,7 +5,7 @@ import ScrollReveal from "./ui/ScrollReveal";
 const credentials = [
   { number: "20+", label: "anos de experiência" },
   { number: "2", label: "livros publicados" },
-  { number: "1000+", label: "procedimentos realizados" },
+  { number: "Milhares", label: "de procedimentos realizados" },
 ];
 
 export default function Doctor() {
@@ -103,7 +103,15 @@ export default function Doctor() {
                     Congresso Mundial de Dermatologia
                   </span>
                   , além de formar médicos de diversos países em seus
-                  treinamentos.
+                  treinamentos de harmonização glútea.
+                </p>
+                <p>
+                  Hoje coordena a equipe médica da{" "}
+                  <strong className="text-[#8C4821] font-semibold">
+                    Clínica Leger
+                  </strong>
+                  , dedicada a tratamentos avançados de contorno corporal e
+                  qualidade da pele.
                 </p>
               </div>
             </ScrollReveal>

@@ -24,6 +24,23 @@ export default function Header() {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape" && menuOpen) setMenuOpen(false);
+      if (e.key === "Tab" && menuOpen) {
+        const menu = document.getElementById("mobile-menu");
+        if (!menu) return;
+        const focusable = menu.querySelectorAll<HTMLElement>(
+          "a[href], button, [tabindex]:not([tabindex='-1'])",
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     },
     [menuOpen],
   );
@@ -47,7 +64,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="#" className="relative z-10">
+        <a href="#conteudo-principal" className="relative z-10">
           <Image
             src={scrolled ? "/logos/logo-dark.png" : "/logos/logo-white.png"}
             alt="Dr. Chacur"
@@ -127,6 +144,9 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
             className="fixed inset-0 bg-[#18191E]/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 lg:hidden"
           >
             {NAV_LINKS.map((link, i) => (

@@ -17,14 +17,7 @@
   --font-sans: 'Montserrat', sans-serif;
 }
 
-/* ===== FONT FACES ===== */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
+/* ===== FONT FACES (only weights used: 200-700) ===== */
 @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-ExtraLight.ttf') format('truetype');
@@ -67,28 +60,8 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 
-/* ===== RESET & BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ===== BASE ===== */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;

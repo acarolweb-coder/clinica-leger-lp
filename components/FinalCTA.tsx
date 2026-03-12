@@ -43,7 +43,8 @@ export default function FinalCTA() {
             indicado para o seu caso.
           </p>
           <p className="text-white/20 text-sm mb-12">
-            Converse com nossa equipe e descubra o tratamento ideal.
+            Converse com nossa equipe e descubra qual planejamento é mais
+            indicado para o seu caso.
           </p>
         </ScrollReveal>
 

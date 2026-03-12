@@ -63,7 +63,10 @@ export default function PainPoints() {
                   <strong className="text-[#8C4821] font-semibold">
                     GoldIncision
                   </strong>{" "}
-                  e reconhecido internacionalmente por sua atuação na área.
+                  e reconhecido internacionalmente por sua atuação na área, o
+                  Dr. Chacur já realizou milhares de tratamentos
+                  personalizados, ajudando pacientes a conquistar um bumbum
+                  mais harmônico, natural e proporcional ao corpo.
                 </p>
               </div>
 
@@ -80,7 +83,7 @@ export default function PainPoints() {
 
           {/* Right — Video Placeholder */}
           <ScrollReveal direction="right">
-            <div className="relative aspect-[9/16] md:aspect-[3/4] bg-[#18191E] overflow-hidden group">
+            <div className="relative aspect-[3/4] bg-[#18191E] overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 border-2 border-[#8C4821]/40 rounded-full flex items-center justify-center group-hover:border-[#8C4821] group-hover:scale-110 transition-all duration-500">
                   <svg className="w-6 h-6 text-[#8C4821] ml-1" fill="currentColor" viewBox="0 0 24 24">

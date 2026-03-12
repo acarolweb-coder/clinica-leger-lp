@@ -34,7 +34,7 @@ export default function Footer() {
 
         {/* Legal disclaimer */}
         <div className="mb-10">
-          <p className="text-[11px] leading-[2] text-white/10 max-w-4xl mx-auto text-center">
+          <p className="text-[11px] leading-[2] text-white/30 max-w-4xl mx-auto text-center">
             {FOOTER_DISCLAIMER}
           </p>
         </div>
