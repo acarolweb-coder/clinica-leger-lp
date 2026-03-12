@@ -37,7 +37,7 @@ function FAQItem({
             {question}
           </span>
         </div>
-        <span className="flex-shrink-0 w-8 h-8 border border-[#B6A095]/30 flex items-center justify-center transition-all duration-300 group-hover:border-[#8C4821]/40">
+        <span className="flex-shrink-0 w-8 h-8 border border-[#B6A095]/30 rounded-full flex items-center justify-center transition-all duration-300 group-hover:border-[#8C4821]/40 group-hover:bg-[#8C4821]/[0.04]">
           <motion.svg
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -84,10 +84,8 @@ export default function FAQ() {
 
       <div className="max-w-3xl mx-auto relative">
         <ScrollReveal className="text-center mb-14">
-          <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-            <span className="w-8 h-px bg-[#8C4821]/30" />
+          <span className="pill-badge-dark mb-6">
             Dúvidas
-            <span className="w-8 h-px bg-[#8C4821]/30" />
           </span>
           <h2 className="text-4xl md:text-5xl font-extralight text-[#18191E] tracking-tight leading-[1.1]">
             Perguntas{" "}

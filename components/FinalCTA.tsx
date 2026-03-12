@@ -7,10 +7,11 @@ import { WHATSAPP, CITIES } from "@/lib/constants";
 export default function FinalCTA() {
   return (
     <section className="relative bg-[#18191E] py-32 md:py-40 px-6 text-center overflow-hidden">
+      {/* Decorative lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#8C4821]/[0.03] rounded-full blur-[150px]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/10 to-transparent" />
       </div>
 
@@ -20,10 +21,8 @@ export default function FinalCTA() {
 
       <div className="max-w-3xl mx-auto relative">
         <ScrollReveal>
-          <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-8">
-            <span className="w-12 h-px bg-[#8C4821]/30" />
+          <span className="pill-badge text-white/80 mb-8">
             Próximo passo
-            <span className="w-12 h-px bg-[#8C4821]/30" />
           </span>
         </ScrollReveal>
 
@@ -31,7 +30,7 @@ export default function FinalCTA() {
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-extralight text-white leading-[1.05] mb-8">
             Cada bumbum possui
             <br />
-            <span className="font-bold bg-gradient-to-r from-[#8C4821] via-[#B6A095] to-[#8C4821] bg-clip-text text-transparent">
+            <span className="font-bold gradient-text-warm">
               características únicas.
             </span>
           </h2>
@@ -55,7 +54,7 @@ export default function FinalCTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-[#8C4821] to-[#72311A] text-white font-semibold text-sm md:text-base px-12 py-5 uppercase tracking-[0.2em] shadow-2xl shadow-[#8C4821]/20 overflow-hidden transition-shadow duration-500 hover:shadow-[#8C4821]/40 focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
+            className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-sm md:text-base px-12 py-5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_12px_40px_rgba(140,72,33,0.35)] focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
           >
             {/* Shine effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

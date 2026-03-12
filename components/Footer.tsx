@@ -6,11 +6,14 @@ import { NAV_LINKS, FOOTER_DISCLAIMER } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#18191E] text-white/20 pt-16 pb-10 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative bg-[#18191E] text-white/20 pt-16 pb-10 px-6 overflow-hidden">
+      {/* Top gradient line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/15 to-transparent" />
+
+      <div className="max-w-6xl mx-auto relative">
         {/* Logo + Nav */}
         <ScrollReveal>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 pb-12 border-b border-white/[0.04]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 pb-12 border-b border-white/[0.06]">
             <Image
               src="/logos/logo-white.png"
               alt="Dr. Chacur"
@@ -23,7 +26,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-[11px] tracking-[0.25em] uppercase text-white/20 hover:text-[#8C4821]/60 transition-colors duration-300"
+                  className="text-[11px] tracking-[0.25em] uppercase text-white/25 hover:text-[#8C4821] transition-colors duration-300"
                 >
                   {link.label}
                 </a>
@@ -40,12 +43,12 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/[0.03]">
-          <p className="text-[11px] tracking-[0.2em] text-white/10 uppercase">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/[0.05]">
+          <p className="text-[11px] tracking-[0.2em] text-white/15 uppercase">
             &copy; {new Date().getFullYear()} Clínica Leger &mdash; Dr. Roberto
             Chacur
           </p>
-          <p className="text-[11px] tracking-[0.2em] text-white/10 uppercase">
+          <p className="text-[11px] tracking-[0.2em] text-white/15 uppercase">
             Todos os direitos reservados
           </p>
         </div>

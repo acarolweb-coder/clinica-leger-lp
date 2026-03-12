@@ -9,10 +9,8 @@ export default function Clinics() {
     <section id="clinicas" className="bg-[#FFF4EE] py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-14">
-          <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-            <span className="w-8 h-px bg-[#8C4821]/30" />
+          <span className="pill-badge-dark mb-6">
             Nossas unidades
-            <span className="w-8 h-px bg-[#8C4821]/30" />
           </span>
           <h2 className="text-4xl md:text-5xl font-extralight text-[#18191E] leading-[1.1]">
             Clínica{" "}
@@ -23,7 +21,7 @@ export default function Clinics() {
         <div className="space-y-12">
           {CLINICS.map((clinic, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center bg-white overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:shadow-[#B6A095]/10 transition-all duration-500">
                 {/* Photo */}
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
@@ -67,7 +65,7 @@ export default function Clinics() {
                     href={clinic.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-[#8C4821] hover:text-[#72311A] transition-colors group"
+                    className="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-[#8C4821] hover:text-[#72311A] border border-[#8C4821]/20 hover:border-[#8C4821]/40 px-5 py-2 rounded-full transition-all duration-300 group"
                   >
                     Ver no mapa
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -80,8 +78,8 @@ export default function Clinics() {
                     <p className="text-[10px] tracking-[0.25em] uppercase text-[#B6A095] font-medium mb-3">
                       Conheça a equipe
                     </p>
-                    <div className="h-20 bg-[#FFF4EE] flex items-center justify-center">
-                      <span className="text-[#B6A095]/40 text-xs">
+                    <div className="h-20 bg-[#FFF4EE] rounded-xl flex items-center justify-center">
+                      <span className="text-[#B6A095]/40 text-xs tracking-widest uppercase">
                         Foto da equipe
                       </span>
                     </div>

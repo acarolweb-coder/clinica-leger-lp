@@ -94,7 +94,7 @@ export default function Header() {
             href={WHATSAPP.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] tracking-[0.15em] uppercase font-semibold bg-[#8C4821] hover:bg-[#72311A] text-white px-6 py-2.5 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
+            className="text-[11px] tracking-[0.15em] uppercase font-semibold bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white px-6 py-2.5 rounded-full border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98)] transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
           >
             Agendar
           </a>
@@ -170,7 +170,7 @@ export default function Header() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.4 }}
-              className="mt-4 bg-[#8C4821] hover:bg-[#72311A] text-white px-10 py-3 text-sm tracking-[0.2em] uppercase font-semibold transition-colors"
+              className="mt-4 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white px-10 py-3.5 rounded-full text-sm tracking-[0.2em] uppercase font-semibold border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] transition-all duration-300"
             >
               Agendar avaliação
             </motion.a>

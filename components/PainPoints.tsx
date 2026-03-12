@@ -24,8 +24,7 @@ export default function PainPoints() {
           {/* Left — Pain Points */}
           <div>
             <ScrollReveal>
-              <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-                <span className="w-8 h-px bg-[#8C4821]/30" />
+              <span className="pill-badge-dark mb-6">
                 Identificação
               </span>
               <h2 className="text-3xl md:text-4xl font-extralight text-[#18191E] leading-[1.15] mb-8">
@@ -40,7 +39,7 @@ export default function PainPoints() {
               {painPoints.map((point, i) => (
                 <StaggerItem key={i} distance={20}>
                   <div className="flex items-start gap-4 mb-5 group">
-                    <span className="flex-shrink-0 w-6 h-6 border border-[#8C4821]/30 flex items-center justify-center mt-0.5 group-hover:bg-[#8C4821] group-hover:border-[#8C4821] transition-all duration-300">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-md border border-[#8C4821]/30 flex items-center justify-center mt-0.5 group-hover:bg-[#8C4821] group-hover:border-[#8C4821] transition-all duration-300">
                       <svg className="w-3 h-3 text-[#8C4821] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
@@ -74,7 +73,7 @@ export default function PainPoints() {
                 href={WHATSAPP.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#8C4821] hover:bg-[#72311A] text-white font-semibold text-[11px] px-8 py-3.5 uppercase tracking-[0.2em] transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-8 py-3.5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
               >
                 Quero saber se sou candidata
               </a>
@@ -83,9 +82,9 @@ export default function PainPoints() {
 
           {/* Right — Video Placeholder */}
           <ScrollReveal direction="right">
-            <div className="relative aspect-[3/4] bg-[#18191E] overflow-hidden group">
+            <div className="relative aspect-[3/4] bg-[#18191E] rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 border-2 border-[#8C4821]/40 rounded-full flex items-center justify-center group-hover:border-[#8C4821] group-hover:scale-110 transition-all duration-500">
+                <div className="w-16 h-16 border-2 border-[#8C4821]/40 rounded-full flex items-center justify-center group-hover:border-[#8C4821] group-hover:scale-110 group-hover:bg-[#8C4821]/10 transition-all duration-500">
                   <svg className="w-6 h-6 text-[#8C4821] ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>

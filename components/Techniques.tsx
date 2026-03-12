@@ -38,10 +38,8 @@ export default function Techniques() {
     <section id="tecnicas" className="bg-[#FFF4EE] py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-14">
-          <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-            <span className="w-8 h-px bg-[#8C4821]/30" />
+          <span className="pill-badge-dark mb-6">
             Técnicas
-            <span className="w-8 h-px bg-[#8C4821]/30" />
           </span>
           <h2 className="text-4xl md:text-5xl font-extralight text-[#18191E] leading-[1.1]">
             O que é a{" "}
@@ -59,7 +57,7 @@ export default function Techniques() {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
           {techniques.map((t, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="relative bg-white p-8 md:p-10 group hover:shadow-xl hover:shadow-[#B6A095]/10 transition-all duration-500">
+              <div className="relative bg-white rounded-2xl p-8 md:p-10 border border-[#B6A095]/10 group hover:shadow-xl hover:shadow-[#B6A095]/10 hover:border-[#8C4821]/10 transition-all duration-500">
                 {/* Number decoration */}
                 <span className="absolute top-6 right-6 text-6xl font-black text-[#FFF4EE] group-hover:text-[#8C4821]/[0.06] transition-colors duration-500">
                   {t.num}
@@ -67,7 +65,7 @@ export default function Techniques() {
 
                 {/* Badge */}
                 {t.badge && (
-                  <span className="inline-block bg-gradient-to-r from-[#8C4821] to-[#72311A] text-white text-[9px] tracking-[0.2em] uppercase font-semibold px-4 py-1.5 mb-6">
+                  <span className="inline-block bg-gradient-to-r from-[#8C4821] to-[#72311A] text-white text-[9px] tracking-[0.2em] uppercase font-semibold px-4 py-1.5 rounded-full mb-6">
                     {t.badge}
                   </span>
                 )}
@@ -116,7 +114,7 @@ export default function Techniques() {
             href={WHATSAPP.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#8C4821] hover:bg-[#72311A] text-white font-semibold text-[11px] px-10 py-4 uppercase tracking-[0.2em] transition-colors duration-300 shadow-lg shadow-[#8C4821]/10 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-10 py-4 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
           >
             Agendar avaliação
           </a>

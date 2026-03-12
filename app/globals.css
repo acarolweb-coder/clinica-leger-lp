@@ -103,3 +103,82 @@ body {
 [id] {
   scroll-margin-top: 80px;
 }
+
+/* ===== DESIGN SYSTEM — Extracted from Figma Hero ===== */
+
+/* Hero title — radial gradient peach-to-white (from Figma) */
+.hero-title {
+  background-image: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(255, 236, 232, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Pill CTA — inner glow animation */
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+.hero-cta:hover::before {
+  transform: translateX(100%);
+}
+
+/* ===== MOTION PREFERENCES ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta::before {
+    display: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Section gradient text — for headings across the page */
+.gradient-text-warm {
+  background-image: linear-gradient(135deg, #8C4821 0%, #B6A095 50%, #8C4821 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Pill badge — transparent bg with subtle border */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Pill badge — dark variant for light backgrounds */
+.pill-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(140, 72, 33, 0.06);
+  border: 1px solid rgba(140, 72, 33, 0.2);
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #8C4821;
+}

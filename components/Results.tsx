@@ -6,20 +6,19 @@ import { WHATSAPP } from "@/lib/constants";
 export default function Results() {
   return (
     <section id="resultados" className="relative bg-[#18191E] py-24 md:py-32 px-6 overflow-hidden">
+      {/* Top decorative line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8C4821]/[0.03] rounded-full blur-[120px]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
 
       <div className="max-w-6xl mx-auto relative">
         <ScrollReveal className="text-center mb-14">
-          <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-            <span className="w-8 h-px bg-[#8C4821]/30" />
+          <span className="pill-badge text-white/80 mb-6">
             Antes e depois
-            <span className="w-8 h-px bg-[#8C4821]/30" />
           </span>
           <h2 className="text-4xl md:text-5xl font-extralight text-white leading-[1.1]">
             Resultados reais{" "}
-            <span className="font-bold bg-gradient-to-r from-[#8C4821] via-[#B6A095] to-[#8C4821] bg-clip-text text-transparent">
+            <span className="font-bold gradient-text-warm">
               de pacientes da Clínica Leger
             </span>
           </h2>
@@ -33,7 +32,7 @@ export default function Results() {
         <StaggerContainer staggerDelay={0.08} className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-14">
           {Array.from({ length: 8 }).map((_, i) => (
             <StaggerItem key={i}>
-              <div className="group relative aspect-[3/4] bg-[#433532] overflow-hidden">
+              <div className="group relative aspect-[3/4] bg-[#433532] rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-white/10 text-xs tracking-widest uppercase">
                     Resultado {i + 1}
@@ -47,7 +46,7 @@ export default function Results() {
 
         {/* ANVISA Seal */}
         <ScrollReveal className="flex justify-center mb-10">
-          <div className="flex items-center gap-3 px-6 py-3 border border-white/[0.06] rounded-sm">
+          <div className="flex items-center gap-3 px-6 py-3 border border-white/[0.06] rounded-full">
             <svg className="w-5 h-5 text-[#8C4821]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
@@ -65,7 +64,7 @@ export default function Results() {
             href={WHATSAPP.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 border border-[#8C4821]/40 text-[#8C4821] hover:bg-[#8C4821] hover:text-white px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-semibold transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821]"
+            className="inline-flex items-center gap-3 border border-[rgba(255,218,199,0.3)] bg-transparent hover:bg-gradient-to-r hover:from-[#72311A] hover:to-[#8C4821] text-[#8C4821] hover:text-white px-8 py-3.5 rounded-full text-[11px] tracking-[0.2em] uppercase font-semibold transition-all duration-500 hover:border-[rgba(255,218,199,0.48)] hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] focus-visible:ring-2 focus-visible:ring-[#8C4821]"
           >
             Entender como funciona
           </a>

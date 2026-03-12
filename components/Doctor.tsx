@@ -11,6 +11,7 @@ const credentials = [
 export default function Doctor() {
   return (
     <section id="dr-chacur" className="relative bg-[#18191E] py-24 md:py-32 px-6 overflow-hidden">
+      {/* Decorative lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/10 to-transparent" />
 
@@ -19,7 +20,7 @@ export default function Doctor() {
           {/* Left — Photo Placeholder */}
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="aspect-[3/4] bg-[#433532] overflow-hidden">
+              <div className="aspect-[3/4] bg-[#433532] rounded-2xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-white/10 text-xs tracking-widest uppercase">
                     Foto do Dr. Chacur
@@ -27,21 +28,20 @@ export default function Doctor() {
                 </div>
               </div>
               {/* Frame decoration */}
-              <div className="absolute -top-3 -left-3 w-20 h-20 border-t-2 border-l-2 border-[#8C4821]/20" />
-              <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-2 border-r-2 border-[#8C4821]/20" />
+              <div className="absolute -top-3 -left-3 w-20 h-20 border-t-2 border-l-2 border-[#8C4821]/20 rounded-tl-xl" />
+              <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-2 border-r-2 border-[#8C4821]/20 rounded-br-xl" />
             </div>
           </ScrollReveal>
 
           {/* Right — Bio */}
           <div>
             <ScrollReveal>
-              <span className="inline-flex items-center gap-3 text-[10px] tracking-[0.4em] uppercase text-[#8C4821]/60 font-medium mb-6">
-                <span className="w-8 h-px bg-[#8C4821]/30" />
+              <span className="pill-badge text-white/80 mb-6">
                 Especialista
               </span>
               <h2 className="text-4xl md:text-5xl font-extralight text-white leading-[1.1] mb-2">
                 Conheça o{" "}
-                <span className="font-bold bg-gradient-to-r from-[#8C4821] via-[#B6A095] to-[#8C4821] bg-clip-text text-transparent">
+                <span className="font-bold gradient-text-warm">
                   Dr. Roberto Chacur
                 </span>
               </h2>
@@ -121,7 +121,7 @@ export default function Doctor() {
               <div className="grid grid-cols-3 gap-3 mt-8">
                 {["Congresso", "Treinamento médico", "Publicações"].map(
                   (label, i) => (
-                    <div key={i} className="group relative aspect-[4/3] bg-[#433532] overflow-hidden">
+                    <div key={i} className="group relative aspect-[4/3] bg-[#433532] rounded-xl overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-white/10 text-[9px] tracking-widest uppercase text-center px-2">
                           {label}
