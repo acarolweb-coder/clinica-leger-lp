@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "./ui/ScrollReveal";
+import FloatingParticles from "./ui/FloatingParticles";
 import { motion } from "framer-motion";
 import { WHATSAPP, CITIES } from "@/lib/constants";
 
@@ -8,12 +10,28 @@ export default function FinalCTA() {
   return (
     <section className="relative bg-[#18191E] py-32 md:py-40 px-6 text-center overflow-hidden">
       {/* Decorative lines */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
+      <div className="divider-animated absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
+
+      {/* Background pattern image */}
+      <div className="absolute inset-0 opacity-[0.04] mix-blend-lighten pointer-events-none">
+        <Image
+          src="/images/clinic-pattern.png"
+          alt=""
+          fill
+          className="object-cover"
+          aria-hidden="true"
+        />
+      </div>
+
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#8C4821]/[0.03] rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/10 to-transparent" />
+        <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B6A095]/[0.02] rounded-full blur-[200px]" />
+        <div className="divider-animated absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/10 to-transparent" />
       </div>
+
+      {/* Floating particles */}
+      <FloatingParticles count={10} />
 
       {/* Decorative vertical lines */}
       <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/[0.02] to-transparent hidden lg:block" />
@@ -21,7 +39,7 @@ export default function FinalCTA() {
 
       <div className="max-w-3xl mx-auto relative">
         <ScrollReveal>
-          <span className="pill-badge text-white/80 mb-8">
+          <span className="pill-badge badge-glass text-white/80 mb-8">
             Próximo passo
           </span>
         </ScrollReveal>
@@ -30,7 +48,7 @@ export default function FinalCTA() {
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-extralight text-white leading-[1.05] mb-8">
             Cada bumbum possui
             <br />
-            <span className="font-bold gradient-text-warm">
+            <span className="font-bold gradient-text-animated">
               características únicas.
             </span>
           </h2>
@@ -54,7 +72,7 @@ export default function FinalCTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-sm md:text-base px-12 py-5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_12px_40px_rgba(140,72,33,0.35)] focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
+            className="cta-premium group relative inline-flex items-center gap-4 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-sm md:text-base px-12 py-5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_12px_40px_rgba(140,72,33,0.35)] focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
           >
             {/* Shine effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

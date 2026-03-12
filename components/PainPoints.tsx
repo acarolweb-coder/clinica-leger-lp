@@ -38,13 +38,13 @@ export default function PainPoints() {
             <StaggerContainer staggerDelay={0.08}>
               {painPoints.map((point, i) => (
                 <StaggerItem key={i} distance={20}>
-                  <div className="flex items-start gap-4 mb-5 group">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-md border border-[#8C4821]/30 flex items-center justify-center mt-0.5 group-hover:bg-[#8C4821] group-hover:border-[#8C4821] transition-all duration-300">
-                      <svg className="w-3 h-3 text-[#8C4821] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <div className="flex items-start gap-4 mb-5 group cursor-default">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-md border border-[#8C4821]/30 flex items-center justify-center mt-0.5 bg-transparent group-hover:bg-gradient-to-br group-hover:from-[#72311A] group-hover:to-[#8C4821] group-hover:border-[#8C4821] transition-all duration-300">
+                      <svg className="w-3 h-3 text-[#8C4821] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <p className="text-sm text-[#433532] font-light leading-relaxed">
+                    <p className="text-sm text-[#433532] font-light leading-relaxed group-hover:translate-x-1 transition-transform duration-300">
                       {point}
                     </p>
                   </div>
@@ -53,7 +53,9 @@ export default function PainPoints() {
             </StaggerContainer>
 
             <ScrollReveal delay={0.4}>
-              <div className="border-l-2 border-[#8C4821]/20 pl-5 mt-8 mb-8">
+              <div className="relative pl-5 mt-8 mb-8">
+                {/* Gradient accent line */}
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 rounded-full bg-gradient-to-b from-[#72311A] to-[#8C4821]" />
                 <p className="text-sm text-[#433532]/80 font-light leading-[1.9]">
                   Foi justamente observando esses incômodos ao longo de mais de
                   20 anos dedicados ao contorno corporal que o Dr. Roberto Chacur
@@ -73,7 +75,7 @@ export default function PainPoints() {
                 href={WHATSAPP.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-8 py-3.5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
+                className="cta-premium inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-8 py-3.5 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
               >
                 Quero saber se sou candidata
               </a>
@@ -82,10 +84,10 @@ export default function PainPoints() {
 
           {/* Right — Video Placeholder */}
           <ScrollReveal direction="right">
-            <div className="relative aspect-[3/4] bg-[#18191E] rounded-2xl overflow-hidden group">
+            <div className="card-lift relative aspect-[3/4] bg-[#18191E] rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 border-2 border-[#8C4821]/40 rounded-full flex items-center justify-center group-hover:border-[#8C4821] group-hover:scale-110 group-hover:bg-[#8C4821]/10 transition-all duration-500">
-                  <svg className="w-6 h-6 text-[#8C4821] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-md bg-white/10 border border-white/20 group-hover:scale-110 group-hover:bg-white/15 transition-all duration-500">
+                  <svg className="w-6 h-6 text-white/90 ml-1 drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>

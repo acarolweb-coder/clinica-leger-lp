@@ -57,15 +57,15 @@ export default function Techniques() {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
           {techniques.map((t, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
-              <div className="relative bg-white rounded-2xl p-8 md:p-10 border border-[#B6A095]/10 group hover:shadow-xl hover:shadow-[#B6A095]/10 hover:border-[#8C4821]/10 transition-all duration-500">
+              <div className="card-lift relative bg-white rounded-2xl p-8 md:p-10 border border-[#B6A095]/10 group hover:border-[#8C4821]/10 transition-all duration-500">
                 {/* Number decoration */}
-                <span className="absolute top-6 right-6 text-6xl font-black text-[#FFF4EE] group-hover:text-[#8C4821]/[0.06] transition-colors duration-500">
+                <span className="absolute top-6 right-6 text-6xl font-black text-[#FFF4EE] group-hover:text-[#8C4821]/[0.08] transition-colors duration-500">
                   {t.num}
                 </span>
 
                 {/* Badge */}
                 {t.badge && (
-                  <span className="inline-block bg-gradient-to-r from-[#8C4821] to-[#72311A] text-white text-[9px] tracking-[0.2em] uppercase font-semibold px-4 py-1.5 rounded-full mb-6">
+                  <span className="inline-block bg-gradient-to-r from-[#8C4821] to-[#72311A] text-white text-[9px] tracking-[0.2em] uppercase font-semibold px-4 py-1.5 rounded-full mb-6 animate-[pulse-glow_3s_ease-in-out_infinite]">
                     {t.badge}
                   </span>
                 )}
@@ -74,7 +74,8 @@ export default function Techniques() {
                   {t.title}
                 </h3>
 
-                <div className="w-10 h-px bg-[#8C4821]/40 mb-5" />
+                {/* Accent line - expands on hover */}
+                <div className="w-10 group-hover:w-16 h-px bg-[#8C4821]/40 mb-5 transition-all duration-500" />
 
                 <p className="text-sm text-[#433532]/70 font-light leading-[1.9] mb-6 relative">
                   {t.description}
@@ -89,7 +90,7 @@ export default function Techniques() {
                       key={j}
                       className="flex items-center gap-3 text-sm text-[#433532] font-light"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#8C4821]/50 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-[#72311A] to-[#8C4821] flex-shrink-0" />
                       {ind}
                     </li>
                   ))}
@@ -114,7 +115,7 @@ export default function Techniques() {
             href={WHATSAPP.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-10 py-4 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
+            className="cta-premium inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] px-10 py-4 rounded-full uppercase tracking-[0.2em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98)] hover:shadow-[inset_0_0_4px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-offset-2"
           >
             Agendar avaliação
           </a>

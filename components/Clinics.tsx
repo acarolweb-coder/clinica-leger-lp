@@ -73,17 +73,6 @@ export default function Clinics() {
                     </svg>
                   </a>
 
-                  {/* Team placeholder */}
-                  <div className="mt-8 pt-6 border-t border-[#B6A095]/15">
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#B6A095] font-medium mb-3">
-                      Conheça a equipe
-                    </p>
-                    <div className="h-20 bg-[#FFF4EE] rounded-xl flex items-center justify-center">
-                      <span className="text-[#B6A095]/40 text-xs tracking-widest uppercase">
-                        Foto da equipe
-                      </span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </ScrollReveal>
