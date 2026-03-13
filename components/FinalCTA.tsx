@@ -42,7 +42,7 @@ export default function FinalCTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="cta-premium group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] tracking-[0.15em] md:tracking-[0.2em] px-8 md:px-10 py-[22px] rounded-full uppercase border border-[rgba(255,218,199,0.2)] hover:border-[rgba(255,218,199,0.48)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] focus-visible:ring-2 focus-visible:ring-[#8C4821] whitespace-nowrap"
+            className="cta-premium group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] tracking-[0.15em] md:tracking-[0.2em] px-8 md:px-10 py-[22px] rounded-full uppercase border border-[rgba(255,218,199,0.2)] hover:border-[rgba(255,218,199,0.48)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] focus-visible:ring-2 focus-visible:ring-[#8C4821]"
           >
             {/* Shine effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

@@ -62,17 +62,17 @@
 }
 
 /* ===== BASE ===== */
-html {
+html, body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FFF4EE;
   color: #433532;
-  overflow-x: hidden;
 }
 
 /* ===== SELECTION ===== */
