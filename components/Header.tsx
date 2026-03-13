@@ -11,9 +11,16 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 60);
       const total = document.body.scrollHeight - window.innerHeight;
       setProgress(total > 0 ? window.scrollY / total : 0);
+
+      // Show header when dobra 02 (Benefits) top reaches the top of the viewport
+      const sections = document.querySelectorAll("main > *");
+      const secondSection = sections[1];
+      if (secondSection) {
+        const rect = secondSection.getBoundingClientRect();
+        setScrolled(rect.top <= 0);
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -56,9 +63,11 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#FFF4EE]/90 backdrop-blur-xl shadow-lg shadow-[#B6A095]/10 translate-y-0 opacity-100"
-          : "bg-transparent md:translate-y-0 md:opacity-100 -translate-y-full opacity-0"
+        menuOpen
+          ? "bg-[#18191E] bottom-0 opacity-100"
+          : scrolled
+            ? "bg-[#FFF4EE]/90 backdrop-blur-xl shadow-lg shadow-[#B6A095]/10 opacity-100"
+            : "bg-transparent md:opacity-100 -translate-y-full opacity-0"
       }`}
     >
       <div className="max-w-[1328px] mx-auto flex items-center justify-between px-6 py-4">
@@ -150,7 +159,7 @@ export default function Header() {
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
-            className="fixed inset-0 bg-[#18191E]/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 lg:hidden"
+            className="absolute inset-0 bg-[#18191E] flex flex-col items-center justify-center gap-8 lg:hidden"
           >
             {NAV_LINKS.map((link, i) => (
               <motion.a

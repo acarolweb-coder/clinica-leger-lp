@@ -260,6 +260,7 @@ body {
 .cta-premium {
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 .cta-premium::after {
   content: '';

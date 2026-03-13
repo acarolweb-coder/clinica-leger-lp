@@ -30,21 +30,18 @@ export default function Hero() {
     <section className="relative min-h-[100svh] md:h-[930px] bg-[#18191E] overflow-hidden">
       {/* Background Image — Dr. Chacur */}
       <div className="absolute inset-0">
-        {/* Mobile: imagem específica com gradiente embutido */}
+        {/* Mobile */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/hero-mobile.png"
           alt=""
-          className="md:hidden absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top will-change-auto md:hidden"
+          style={{ transform: "translateZ(0)" }}
         />
-        {/* Desktop: imagem original com gradientes CSS */}
-        <Image
-          src="/images/hero-bg.png"
-          alt=""
-          fill
-          className="hidden md:block object-cover object-center"
-          priority
-          quality={90}
+        {/* Desktop */}
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{ backgroundImage: "url(/images/hero-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
         />
         {/* Desktop: gradient lateral para legibilidade */}
         <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#18191E]/70 via-[#18191E]/30 to-transparent" />
@@ -55,7 +52,7 @@ export default function Hero() {
       <FloatingParticles count={15} />
 
       {/* Content */}
-      <div className="relative h-full flex flex-col md:justify-center max-w-[1328px] mx-auto px-5 md:px-6 w-full pt-[42svh] md:pt-0 pb-[60px] md:pb-0">
+      <div className="relative h-full flex flex-col md:justify-center max-w-[1328px] mx-auto px-5 md:px-6 w-full pt-[42svh] md:pt-0 pb-10 md:pb-0">
         {/* Main Content */}
         <div className="max-w-[540px]">
           {/* Mobile: Logo + Badge row */}
@@ -73,9 +70,9 @@ export default function Hero() {
               height={30}
               className=""
             />
-            <div className="inline-flex items-center gap-2 bg-white/[0.07] border border-white/[0.46] rounded-full px-4 py-1">
+            <div className="inline-flex items-center gap-1.5 bg-white/[0.07] border border-white/[0.46] rounded-full px-3 py-0.5">
               <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
-              <span className="text-[8px] tracking-[0.2em] uppercase text-white/80 font-medium">Harmonização Glútea</span>
+              <span className="text-[8px] tracking-[0.15em] uppercase text-white/80 font-medium">Harmonização Glútea</span>
             </div>
           </motion.div>
 
@@ -87,7 +84,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -15, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease }}
-            className="mb-5 hidden md:block"
+            className="mb-8 hidden md:block"
           >
             <div className="badge-glass text-white/80">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8C4821] animate-pulse" />
@@ -100,7 +97,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ delay: 0.3, duration: 1, ease }}
-            className="gradient-text-animated text-[32px] md:text-[clamp(2.25rem,5vw,3.25rem)] font-normal leading-[1.21] md:leading-[1.15] tracking-[-1.2px] md:tracking-[-0.03em] mb-5 md:mb-6"
+            className="gradient-text-animated text-[32px] md:text-[clamp(2.25rem,5vw,3.25rem)] font-normal leading-[1.21] md:leading-[1.15] tracking-[-1.2px] md:tracking-[-0.03em] mb-4 md:mb-6"
           >
             Mais contorno, mais projeção e bumbum liso,{" "}
             <span className="md:font-bold">sem cirurgia</span>
@@ -111,7 +108,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7, ease }}
-            className="text-[15.5px] md:text-[clamp(0.9375rem,2vw,1.125rem)] text-white/70 md:text-white/65 font-light leading-[1.55] md:leading-[1.65] mb-6 md:mb-8 max-w-[480px]"
+            className="text-[15.5px] md:text-[clamp(0.9375rem,2vw,1.125rem)] text-white/70 md:text-white/65 font-light leading-[1.55] md:leading-[1.65] mb-5 md:mb-8 max-w-[480px]"
           >
             Conheça as técnicas avançadas que tratam volume e celulite,
             realizadas pelo Dr. Roberto Chacur, médico referência internacional
@@ -123,7 +120,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex items-center gap-[23px] md:gap-7 mb-8 md:mb-10 opacity-[0.67] md:opacity-100"
+            className="flex items-center gap-[23px] md:gap-7 mb-6 md:mb-10 opacity-[0.67] md:opacity-100"
           >
             {CITIES.map((city, i) => (
               <div key={city} className="flex items-center gap-5 md:gap-7">
@@ -148,7 +145,7 @@ export default function Hero() {
               href={WHATSAPP.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-premium group relative flex md:inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[13px] md:text-sm px-8 md:px-12 py-[22px] md:py-[25px] rounded-full uppercase tracking-[0.15em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_4px_24px_rgba(140,72,33,0.25)] hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_40px_rgba(140,72,33,0.4)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
+              className="cta-premium group relative inline-flex w-full md:w-auto justify-center items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[13px] md:text-sm px-8 md:px-10 py-[22px] md:py-[22px] rounded-full uppercase tracking-[0.15em] border border-[rgba(255,218,199,0.48)] shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_4px_24px_rgba(140,72,33,0.25)] hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_40px_rgba(140,72,33,0.4)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
             >
               <span className="relative">Descobrir se é para mim</span>
               <svg

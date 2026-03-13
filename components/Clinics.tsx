@@ -21,9 +21,9 @@ export default function Clinics() {
   return (
     <section id="clinicas" className="bg-[#FFF4EE] py-24 md:py-32">
       <div className="max-w-[1328px] mx-auto px-6">
-        <ScrollReveal className="text-center mb-14">
+        <ScrollReveal className="text-center mb-8 md:mb-14">
           <span className="pill-badge-dark mb-6">Nossas unidades</span>
-          <h2 className="text-3xl md:text-[2.75rem] font-extralight text-[#18191E] leading-[1.1]">
+          <h2 className="text-[2.25rem] md:text-[2.75rem] font-extralight text-[#18191E] leading-[1.1]">
             Clínica{" "}
             <span className="font-bold text-[#8C4821]">Leger</span>
           </h2>
