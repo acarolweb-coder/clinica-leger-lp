@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, WHATSAPP } from "@/lib/constants";
 
@@ -62,16 +61,20 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-[1328px] mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="#conteudo-principal" className="relative z-10">
-          <Image
-            src={scrolled ? "/logos/logo-dark.png" : "/logos/logo-white.png"}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/logo.svg"
             alt="Dr. Chacur"
-            width={scrolled ? 120 : 140}
-            height={50}
-            className="object-contain transition-all duration-500"
-            priority
+            width={140}
+            height={30}
+            className={`h-[30px] w-auto object-contain transition-all duration-500 ${
+              scrolled
+                ? "brightness-0 opacity-80"
+                : ""
+            }`}
           />
         </a>
 

@@ -6,11 +6,11 @@ import { NAV_LINKS, FOOTER_DISCLAIMER } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#18191E] text-white/20 pt-16 pb-10 px-6 overflow-hidden">
+    <footer className="relative bg-[#18191E] text-white/20 pt-16 pb-10 overflow-hidden">
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/15 to-transparent" />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-[1328px] mx-auto px-6 relative">
         {/* Logo + Nav */}
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 pb-12 border-b border-white/[0.06]">

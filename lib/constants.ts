@@ -45,24 +45,21 @@ export const PRESS_ITEMS = [
     headline:
       "Tratamento parcialmente concluído! Conheça o procedimento realizado por Isabelle Nogueira",
     person: "Isabelle Nogueira",
-    image:
-      "https://midias.correio24horas.com.br/2024/12/05/isabelle-nogueira-2526945.png",
+    image: "/images/press-isabelle.png",
   },
   {
     outlet: "O Globo",
     headline:
       "Juju Salimeni faz novo procedimento no bumbum e aprova resultado: 'Muito mais bonito, pele lisinha'",
     person: "Juju Salimeni",
-    image:
-      "https://s2-oglobo.glbimg.com/DcHHxXBjjDkeT7XkFgxdiDPbB-0=/0x0:3264x2001/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/c/E/hBwatATQqe7m6tVlBFSw/juju-5-1-.jpg",
+    image: "/images/press-juju.jpg",
   },
   {
     outlet: "IstoÉ",
     headline:
       "Em busca da pele perfeita, Giovanna Antonelli se rende a inovador procedimento estético",
     person: "Giovanna Antonelli",
-    image:
-      "https://jeffersondealmeida.com.br/wp-content/uploads/2024/06/unnamed-2024-06-05T143011.294.jpg",
+    image: "/images/press-giovanna.jpg",
   },
 ] as const;
 

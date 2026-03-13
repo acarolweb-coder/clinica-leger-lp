@@ -8,7 +8,7 @@ import { WHATSAPP, CITIES } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
-    <section className="relative bg-[#18191E] py-32 md:py-40 px-6 text-center overflow-hidden">
+    <section className="relative bg-[#18191E] py-32 md:py-40 text-center overflow-hidden">
       {/* Decorative lines */}
       <div className="divider-animated absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/20 to-transparent" />
 
@@ -37,7 +37,7 @@ export default function FinalCTA() {
       <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/[0.02] to-transparent hidden lg:block" />
       <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/[0.02] to-transparent hidden lg:block" />
 
-      <div className="max-w-3xl mx-auto relative">
+      <div className="max-w-[1328px] mx-auto px-6 relative">
         <ScrollReveal>
           <span className="pill-badge badge-glass text-white/80 mb-8">
             Próximo passo
@@ -45,7 +45,7 @@ export default function FinalCTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-extralight text-white leading-[1.05] mb-8">
+          <h2 className="text-3xl md:text-[2.75rem] font-extralight text-white leading-[1.05] mb-8">
             Cada bumbum possui
             <br />
             <span className="font-bold gradient-text-animated">

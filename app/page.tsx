@@ -6,6 +6,7 @@ import PainPoints from "@/components/PainPoints";
 import Techniques from "@/components/Techniques";
 import Doctor from "@/components/Doctor";
 import Testimonials from "@/components/Testimonials";
+import Press from "@/components/Press";
 import Clinics from "@/components/Clinics";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -24,6 +25,7 @@ export default function Home() {
         <Techniques />
         <Doctor />
         <Testimonials />
+        <Press />
         <Clinics />
         <FAQ />
         <FinalCTA />
