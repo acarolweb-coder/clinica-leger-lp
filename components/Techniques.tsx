@@ -86,7 +86,7 @@ export default function Techniques() {
 
                   {/* Text */}
                   <div
-                    className={`flex flex-col justify-center p-6 md:p-10 ${
+                    className={`flex flex-col justify-center p-5 md:p-10 ${
                       t.imagePosition === "right" ? "md:order-1" : ""
                     }`}
                   >
@@ -103,7 +103,7 @@ export default function Techniques() {
                       <p className="text-[10px] tracking-[0.35em] uppercase text-[#8C4821]/40 font-medium mb-3">
                         Indicado para quem deseja
                       </p>
-                      <div className="grid grid-cols-2 gap-x-5 gap-y-2.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2.5">
                         {t.indications.map((ind, j) => (
                           <div key={j} className="flex items-start gap-3 group/item">
                             <div className="w-5 h-5 rounded-md bg-[#8C4821]/[0.06] border border-[#8C4821]/10 flex items-center justify-center flex-shrink-0 mt-0.5">

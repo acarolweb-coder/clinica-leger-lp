@@ -20,8 +20,7 @@ export const CLINICS = [
     neighborhood: "Moema",
     address: "Alameda dos Maracatins, 1435 - sala 801",
     region: "Moema, São Paulo - SP",
-    image:
-      "https://www.robertochacur.com/wp-content/uploads/2022/10/RECEPCAO-sp-LEGER.jpg",
+    image: "/images/clinica-sp.jpg",
     mapUrl:
       "https://maps.google.com/?q=Alameda+dos+Maracatins,+1435,+Moema,+São+Paulo",
   },
@@ -30,8 +29,7 @@ export const CLINICS = [
     neighborhood: "Barra da Tijuca",
     address: "Av. João Cabral de Mello Neto, 850 - bloco 3, sala 1603",
     region: "Barra da Tijuca, Rio de Janeiro - RJ",
-    image:
-      "https://www.robertochacur.com/wp-content/uploads/2022/10/RECEPCAO-RJ-LEGER.jpg",
+    image: "/images/clinica-rj.jpg",
     mapUrl:
       "https://maps.google.com/?q=Av+João+Cabral+de+Mello+Neto,+850,+Barra+da+Tijuca,+Rio+de+Janeiro",
   },

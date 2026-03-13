@@ -260,7 +260,7 @@ export default function Doctor() {
 
           {/* ─── Cell 4: Highlight cards — full width bottom ─── */}
           <ScrollReveal delay={0.25} className="md:col-span-12 md:row-start-3 order-4 mt-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5">
               {/* Congresso — carousel on hover */}
               <ImageCarouselCard
                 images={congressImages}
@@ -278,7 +278,7 @@ export default function Doctor() {
               />
 
               {/* Publicações — 2 livros lado a lado */}
-              <div className="group relative aspect-[16/10] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-xl hover:shadow-[#8C4821]/10 bg-gradient-to-br from-[#2A2226] to-[#1E1A1C]">
+              <div className="col-span-2 sm:col-span-1 group relative aspect-[16/10] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-xl hover:shadow-[#8C4821]/10 bg-gradient-to-br from-[#2A2226] to-[#1E1A1C]">
                 <div className="absolute inset-0 flex items-center justify-center gap-3 md:gap-5 px-6 md:px-10 py-4">
                   <div className="relative h-[75%] aspect-[3/4] rounded-sm overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:-rotate-2 group-hover:scale-105">
                     <Image

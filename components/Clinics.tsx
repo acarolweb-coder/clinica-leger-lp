@@ -47,7 +47,7 @@ export default function Clinics() {
                   </div>
 
                   {/* Info */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <div className="p-5 md:p-8 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-8 h-px bg-[#8C4821]" />
                       <span className="text-[10px] tracking-[0.3em] uppercase text-[#8C4821]/60 font-medium">
@@ -116,7 +116,7 @@ export default function Clinics() {
                         <p className="text-[10px] tracking-[0.35em] uppercase text-[#8C4821]/40 font-medium mb-4">
                           Equipe Médica
                         </p>
-                        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                           {team.map((member, j) => (
                             <div key={j} className="text-center group/member">
                               <div className="w-14 h-14 mx-auto rounded-full overflow-hidden border-2 border-[#B6A095]/10 group-hover/member:border-[#8C4821]/30 transition-colors duration-300 mb-1.5">

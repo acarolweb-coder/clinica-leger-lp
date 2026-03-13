@@ -84,7 +84,7 @@ export default function Testimonials() {
 
         {/* 4 Video Testimonials */}
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 max-w-5xl mx-auto">
             {VIDEO_TESTIMONIALS.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}

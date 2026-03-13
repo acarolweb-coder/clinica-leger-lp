@@ -27,7 +27,7 @@ function LocationPin() {
 
 export default function Hero() {
   return (
-    <section className="relative h-[930px] bg-[#18191E] overflow-hidden">
+    <section className="relative min-h-[100svh] md:h-[930px] bg-[#18191E] overflow-hidden">
       {/* Background Image — Dr. Chacur */}
       <div className="absolute inset-0">
         <Image
@@ -90,10 +90,10 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex items-center gap-5 md:gap-7 mb-10"
+            className="flex flex-wrap items-center gap-3 md:gap-7 mb-10"
           >
             {CITIES.map((city, i) => (
-              <div key={city} className="flex items-center gap-5 md:gap-7">
+              <div key={city} className="flex items-center gap-3 md:gap-7">
                 {i > 0 && <div className="w-1 h-1 rounded-full bg-[#8C4821]/50" />}
                 <div className="flex items-center gap-2 text-white/50">
                   <LocationPin />
@@ -115,7 +115,7 @@ export default function Hero() {
               href={WHATSAPP.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-premium group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[13px] md:text-sm px-12 py-[25px] rounded-full uppercase tracking-[0.15em] border border-[rgba(255,218,199,0.35)] shadow-[0_4px_24px_rgba(140,72,33,0.25)] hover:shadow-[0_8px_40px_rgba(140,72,33,0.4)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
+              className="cta-premium group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[13px] md:text-sm px-8 md:px-12 py-[22px] md:py-[25px] rounded-full uppercase tracking-[0.15em] border border-[rgba(255,218,199,0.35)] shadow-[0_4px_24px_rgba(140,72,33,0.25)] hover:shadow-[0_8px_40px_rgba(140,72,33,0.4)] transition-all duration-500 focus-visible:ring-2 focus-visible:ring-[#B6A095] focus-visible:ring-offset-2 focus-visible:ring-offset-[#18191E]"
             >
               <span className="relative">Descobrir se é para mim</span>
               <svg

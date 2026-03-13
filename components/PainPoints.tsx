@@ -86,7 +86,7 @@ export default function PainPoints() {
           <ScrollReveal direction="right">
             <div className="grid grid-cols-2 gap-3">
               {/* Video card — span full width */}
-              <div className="col-span-2 card-lift relative aspect-[3/4] bg-[#18191E] rounded-2xl overflow-hidden group">
+              <div className="col-span-2 card-lift relative aspect-[4/3] md:aspect-[3/4] bg-[#18191E] rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/clinica-optimized.jpg"
                   alt="Interior da Clínica Leger"
@@ -114,19 +114,19 @@ export default function PainPoints() {
               </div>
 
               {/* Mini stat cards */}
-              <div className="bg-[#8C4821]/[0.05] border border-[#8C4821]/10 rounded-xl p-5 text-center group hover:border-[#8C4821]/20 transition-colors duration-300">
-                <span className="block text-2xl font-bold text-[#8C4821] mb-1">
+              <div className="bg-[#8C4821]/[0.05] border border-[#8C4821]/10 rounded-xl p-4 md:p-5 text-center group hover:border-[#8C4821]/20 transition-colors duration-300">
+                <span className="block text-xl md:text-2xl font-bold text-[#8C4821] mb-1">
                   +5.000
                 </span>
-                <span className="text-xs text-[#433532]/60 font-light uppercase tracking-wider">
+                <span className="text-[10px] md:text-xs text-[#433532]/60 font-light uppercase tracking-wider">
                   Tratamentos
                 </span>
               </div>
-              <div className="bg-[#8C4821]/[0.05] border border-[#8C4821]/10 rounded-xl p-5 text-center group hover:border-[#8C4821]/20 transition-colors duration-300">
-                <span className="block text-2xl font-bold text-[#8C4821] mb-1">
+              <div className="bg-[#8C4821]/[0.05] border border-[#8C4821]/10 rounded-xl p-4 md:p-5 text-center group hover:border-[#8C4821]/20 transition-colors duration-300">
+                <span className="block text-xl md:text-2xl font-bold text-[#8C4821] mb-1">
                   20+
                 </span>
-                <span className="text-xs text-[#433532]/60 font-light uppercase tracking-wider">
+                <span className="text-[10px] md:text-xs text-[#433532]/60 font-light uppercase tracking-wider">
                   Anos de experiência
                 </span>
               </div>

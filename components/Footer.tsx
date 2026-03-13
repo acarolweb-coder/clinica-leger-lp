@@ -22,7 +22,7 @@ export default function Footer() {
               height={38}
               className="opacity-40 hover:opacity-60 transition-opacity duration-500"
             />
-            <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            <nav className="flex flex-wrap justify-center gap-x-5 md:gap-x-8 gap-y-3">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
@@ -45,11 +45,11 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/[0.05]">
-          <p className="text-[11px] tracking-[0.2em] text-white/15 uppercase">
+          <p className="text-[10px] md:text-[11px] tracking-[0.15em] md:tracking-[0.2em] text-white/15 uppercase text-center md:text-left">
             &copy; {new Date().getFullYear()} Clínica Leger &mdash; Dr. Roberto
             Chacur
           </p>
-          <p className="text-[11px] tracking-[0.2em] text-white/15 uppercase">
+          <p className="text-[10px] md:text-[11px] tracking-[0.15em] md:tracking-[0.2em] text-white/15 uppercase">
             Todos os direitos reservados
           </p>
         </div>

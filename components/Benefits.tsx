@@ -65,13 +65,13 @@ export default function Benefits() {
         <StaggerContainer staggerDelay={0.12} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-14">
           {benefits.map((b, i) => (
             <StaggerItem key={i}>
-              <div className="card-lift group text-center p-7 md:p-9 rounded-2xl bg-white/70 backdrop-blur-sm border border-[#B6A095]/10 hover:bg-white hover:border-[#8C4821]/20 transition-all duration-500 relative overflow-hidden h-full">
+              <div className="card-lift group text-center p-5 md:p-9 rounded-2xl bg-white/70 backdrop-blur-sm border border-[#B6A095]/10 hover:bg-white hover:border-[#8C4821]/20 transition-all duration-500 relative overflow-hidden h-full">
                 {/* Background number */}
                 <span className="absolute top-4 right-5 text-6xl font-black text-[#8C4821]/[0.04] group-hover:text-[#8C4821]/[0.08] transition-colors duration-500 select-none leading-none">
                   {b.num}
                 </span>
 
-                <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-[#8C4821]/[0.08] to-[#8C4821]/[0.02] border border-[#8C4821]/10 flex items-center justify-center text-[#8C4821] group-hover:from-[#8C4821]/15 group-hover:to-[#8C4821]/[0.05] group-hover:border-[#8C4821]/25 group-hover:scale-110 transition-all duration-500">
+                <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-4 md:mb-5 rounded-2xl bg-gradient-to-br from-[#8C4821]/[0.08] to-[#8C4821]/[0.02] border border-[#8C4821]/10 flex items-center justify-center text-[#8C4821] group-hover:from-[#8C4821]/15 group-hover:to-[#8C4821]/[0.05] group-hover:border-[#8C4821]/25 group-hover:scale-110 transition-all duration-500">
                   {b.icon}
                 </div>
                 <h3 className="text-base font-bold text-[#18191E] mb-2 relative">

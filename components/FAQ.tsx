@@ -33,7 +33,7 @@ function FAQItem({
         aria-expanded={isOpen}
         aria-controls={`${id}-answer`}
         id={`${id}-question`}
-        className="w-full flex items-center justify-between px-6 py-5 text-left gap-5 group cursor-pointer focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-inset rounded-2xl"
+        className="w-full flex items-center justify-between px-4 py-4 md:px-6 md:py-5 text-left gap-3 md:gap-5 group cursor-pointer focus-visible:ring-2 focus-visible:ring-[#8C4821] focus-visible:ring-inset rounded-2xl"
       >
         <div className="flex items-center gap-4">
           <span
@@ -91,7 +91,7 @@ function FAQItem({
             transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pl-[4.25rem]">
+            <div className="px-5 pb-6 pl-5 md:px-6 md:pl-[4.25rem]">
               <div className="w-10 h-px bg-gradient-to-r from-[#72311A] to-[#8C4821] mb-4 rounded-full" />
               <p className="text-[#433532]/70 text-sm leading-[1.9] font-light max-w-2xl">
                 {answer}
