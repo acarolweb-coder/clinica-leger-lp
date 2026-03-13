@@ -32,23 +32,6 @@ const techniques = [
   },
 ];
 
-function ImagePlaceholder({ label }: { label: string }) {
-  return (
-    <div className="absolute inset-0 bg-gradient-to-br from-[#D4B5A0] to-[#B6A095]">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "radial-gradient(circle at 1px 1px, #8C4821 1px, transparent 0)",
-        backgroundSize: "24px 24px",
-      }} />
-      {/* Label */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-white/20 text-xs tracking-[0.3em] uppercase font-medium">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default function Techniques() {
   return (
@@ -81,7 +64,12 @@ export default function Techniques() {
                       t.imagePosition === "right" ? "md:order-2" : ""
                     }`}
                   >
-                    <ImagePlaceholder label={t.title} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={t.image}
+                      alt={t.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                   </div>
 
                   {/* Text */}
