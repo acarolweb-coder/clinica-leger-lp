@@ -6,7 +6,7 @@ import { WHATSAPP, CITIES } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
-    <section className="relative bg-[#18191E] py-32 md:py-40 text-center overflow-hidden">
+    <section className="relative bg-[#18191E] py-20 md:py-40 text-center overflow-hidden">
       <div className="max-w-[1328px] mx-auto px-6 relative">
         <ScrollReveal>
           <span className="pill-badge badge-glass text-white/80 mb-8">
@@ -15,7 +15,7 @@ export default function FinalCTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-3xl md:text-[2.75rem] font-extralight text-white leading-[1.05] mb-8">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-extralight text-white leading-[1.1] mb-6 md:mb-8">
             Cada bumbum possui
             <br />
             <span className="font-bold gradient-text-animated">
@@ -25,11 +25,11 @@ export default function FinalCTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-white/40 font-light text-base md:text-lg leading-relaxed mb-3 max-w-lg mx-auto">
+          <p className="text-white/40 font-light text-sm md:text-lg leading-relaxed mb-3 max-w-lg mx-auto">
             Por isso, o primeiro passo é entender qual planejamento é mais
             indicado para o seu caso.
           </p>
-          <p className="text-white/20 text-sm mb-12">
+          <p className="text-white/20 text-xs md:text-sm mb-8 md:mb-12">
             Converse com nossa equipe e descubra qual planejamento é mais
             indicado para o seu caso.
           </p>
@@ -42,7 +42,7 @@ export default function FinalCTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="cta-premium group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] tracking-[0.2em] px-10 py-[22px] rounded-full uppercase border border-[rgba(255,218,199,0.2)] hover:border-[rgba(255,218,199,0.48)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] focus-visible:ring-2 focus-visible:ring-[#8C4821]"
+            className="cta-premium group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#72311A] to-[#8C4821] text-white font-semibold text-[11px] tracking-[0.15em] md:tracking-[0.2em] px-8 md:px-10 py-[22px] rounded-full uppercase border border-[rgba(255,218,199,0.2)] hover:border-[rgba(255,218,199,0.48)] overflow-hidden transition-all duration-500 hover:shadow-[inset_0_0_2px_0_rgba(222,134,84,0.98),0_8px_32px_rgba(140,72,33,0.3)] focus-visible:ring-2 focus-visible:ring-[#8C4821] whitespace-nowrap"
           >
             {/* Shine effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -55,7 +55,7 @@ export default function FinalCTA() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.4}>
-          <div className="flex items-center justify-center gap-4 text-[10px] tracking-[0.35em] text-white/15 uppercase mt-12">
+          <div className="flex items-center justify-center gap-4 text-[8px] md:text-[10px] tracking-[0.25em] md:tracking-[0.35em] text-white/15 uppercase mt-8 md:mt-12">
             {CITIES.map((city, i) => (
               <span key={city} className="flex items-center gap-4">
                 {i > 0 && (

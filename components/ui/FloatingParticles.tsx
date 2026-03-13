@@ -11,23 +11,26 @@ interface Particle {
   opacity: number;
 }
 
+function generateParticles(count: number): Particle[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    delay: Math.random() * 15,
+    duration: 12 + Math.random() * 18,
+    size: 1 + Math.random() * 2.5,
+    opacity: 0.1 + Math.random() * 0.25,
+  }));
+}
+
 export default function FloatingParticles({ count = 20 }: { count?: number }) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) return;
-
-    setParticles(
-      Array.from({ length: count }, (_, i) => ({
-        id: i,
-        left: Math.random() * 100,
-        delay: Math.random() * 15,
-        duration: 12 + Math.random() * 18,
-        size: 1 + Math.random() * 2.5,
-        opacity: 0.1 + Math.random() * 0.25,
-      }))
-    );
+    if (!prefersReduced) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: browser-only initialization
+      setParticles(generateParticles(count));
+    }
   }, [count]);
 
   if (particles.length === 0) return null;

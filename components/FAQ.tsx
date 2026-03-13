@@ -110,12 +110,12 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative bg-[#FFF4EE] py-24 md:py-32 overflow-hidden"
+      className="relative bg-[#FFF4EE] py-16 md:py-32 overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8C4821]/10 to-transparent" />
 
       <div className="max-w-[1328px] mx-auto px-6 relative">
-        <ScrollReveal className="text-center mb-14">
+        <ScrollReveal className="text-center mb-8 md:mb-14">
           <span className="pill-badge-dark mb-6">Dúvidas</span>
           <h2 className="text-3xl md:text-[2.75rem] font-extralight text-[#18191E] tracking-tight leading-[1.1]">
             Perguntas{" "}
@@ -141,7 +141,7 @@ export default function FAQ() {
         </StaggerContainer>
 
         {/* CTA below FAQ */}
-        <ScrollReveal className="text-center mt-14">
+        <ScrollReveal className="text-center mt-10 md:mt-14">
           <p className="text-[#433532]/50 text-sm font-light mb-5">
             Ainda tem dúvidas? Fale diretamente com nossa equipe.
           </p>

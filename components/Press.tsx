@@ -6,7 +6,7 @@ import { PRESS_ITEMS, WHATSAPP } from "@/lib/constants";
 
 export default function Press() {
   return (
-    <section className="relative bg-[#FFF4EE] py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-[#FFF4EE] py-16 md:py-32 overflow-hidden">
       {/* Top divider */}
       <div className="divider-animated absolute top-0 left-0 right-0" />
 
@@ -17,7 +17,7 @@ export default function Press() {
 
         <StaggerContainer
           staggerDelay={0.1}
-          className="grid md:grid-cols-3 gap-4 md:gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
         >
           {PRESS_ITEMS.map((item, i) => (
             <StaggerItem key={i}>

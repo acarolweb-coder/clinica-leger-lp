@@ -147,7 +147,7 @@ export default function Doctor() {
           {/* ─── Cell 1: Main doctor photo — tall, left, spans header + bio rows ─── */}
           <ScrollReveal
             direction="left"
-            className="md:col-span-6 md:row-start-1 md:row-end-3 order-2 md:order-1"
+            className="md:col-span-6 md:row-start-1 md:row-end-3 order-1"
           >
             <div className="relative group h-full">
               <div className="relative aspect-[3/4] md:aspect-auto md:h-full md:min-h-[580px] rounded-2xl overflow-hidden transition-all duration-700 group-hover:shadow-[0_24px_80px_rgba(140,72,33,0.2)]">
@@ -177,7 +177,7 @@ export default function Doctor() {
           </ScrollReveal>
 
           {/* ─── Cell 2: Header + CRM — top right ─── */}
-          <ScrollReveal className="md:col-span-6 md:row-start-1 order-1 md:order-2 flex flex-col justify-end">
+          <ScrollReveal className="md:col-span-6 md:row-start-1 order-2 flex flex-col justify-end">
             <span className="pill-badge text-white/80 mb-6 self-start">
               Conheça seu doutor
             </span>
@@ -260,7 +260,7 @@ export default function Doctor() {
 
           {/* ─── Cell 4: Highlight cards — full width bottom ─── */}
           <ScrollReveal delay={0.25} className="md:col-span-12 md:row-start-3 order-4 mt-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5">
               {/* Congresso — carousel on hover */}
               <ImageCarouselCard
                 images={congressImages}

@@ -26,7 +26,7 @@ export default function Results() {
   const posRef = useRef(0);
   const speedRef = useRef(0.5);
   const pausedRef = useRef(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [, setIsPaused] = useState(false);
 
   // Card width + gap
   const getCardWidth = useCallback(() => {
@@ -129,7 +129,7 @@ export default function Results() {
           <span className="pill-badge text-white/80 mb-6">
             Antes e depois
           </span>
-          <h2 className="text-3xl md:text-[2.75rem] font-light text-white leading-[1.3] tracking-tight max-w-xl mx-auto">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-light text-white leading-[1.3] tracking-tight max-w-xl mx-auto">
             Resultados reais{" "}
             <span className="font-bold gradient-text-warm">
               de pacientes da Clínica Leger

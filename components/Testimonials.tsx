@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import ScrollReveal from "./ui/ScrollReveal";
 import { WHATSAPP } from "@/lib/constants";
 
@@ -62,14 +63,68 @@ function VideoCard({ video }: { video: (typeof VIDEO_TESTIMONIALS)[0] }) {
   );
 }
 
+function MobileVideoCarousel() {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () =>
+    setCurrent((c) => (c - 1 + VIDEO_TESTIMONIALS.length) % VIDEO_TESTIMONIALS.length);
+  const next = () =>
+    setCurrent((c) => (c + 1) % VIDEO_TESTIMONIALS.length);
+
+  return (
+    <div className="relative">
+      {/* Single video visible */}
+      <div className="overflow-hidden rounded-2xl">
+        <VideoCard video={VIDEO_TESTIMONIALS[current]} />
+      </div>
+
+      {/* Arrows */}
+      <button
+        onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 active:bg-black/60 transition-all duration-300 z-20 cursor-pointer"
+        aria-label="Depoimento anterior"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 active:bg-black/60 transition-all duration-300 z-20 cursor-pointer"
+        aria-label="Próximo depoimento"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {VIDEO_TESTIMONIALS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
+              i === current
+                ? "bg-[#8C4821] scale-125"
+                : "bg-[#8C4821]/20"
+            }`}
+            aria-label={`Depoimento ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Testimonials() {
   return (
-    <section className="bg-[#FFF4EE] py-24 md:py-32 overflow-hidden">
+    <section className="bg-[#FFF4EE] py-16 md:py-32 overflow-hidden">
       <div className="max-w-[1328px] mx-auto px-6">
         {/* Header */}
-        <ScrollReveal className="text-center mb-14">
+        <ScrollReveal className="text-center mb-10 md:mb-14">
           <span className="pill-badge-dark mb-6">Depoimentos</span>
-          <h2 className="text-3xl md:text-[2.75rem] font-extralight text-[#18191E] leading-[1.1]">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-extralight text-[#18191E] leading-[1.1]">
             O que muda
             <br />
             <span className="font-bold text-[#8C4821]">
@@ -82,9 +137,14 @@ export default function Testimonials() {
           </p>
         </ScrollReveal>
 
-        {/* 4 Video Testimonials */}
-        <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 max-w-5xl mx-auto">
+        {/* Mobile: Carousel */}
+        <ScrollReveal className="md:hidden">
+          <MobileVideoCarousel />
+        </ScrollReveal>
+
+        {/* Desktop: Grid */}
+        <ScrollReveal className="hidden md:block">
+          <div className="grid grid-cols-4 gap-5 max-w-5xl mx-auto">
             {VIDEO_TESTIMONIALS.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}

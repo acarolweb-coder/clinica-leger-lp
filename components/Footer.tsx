@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import ScrollReveal from "./ui/ScrollReveal";
 import { NAV_LINKS, FOOTER_DISCLAIMER } from "@/lib/constants";
 
