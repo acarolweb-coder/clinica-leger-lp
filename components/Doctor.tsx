@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import ScrollReveal from "./ui/ScrollReveal";
 import { WHATSAPP } from "@/lib/constants";
 
@@ -30,33 +30,21 @@ function ImageCarouselCard({
   alt: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [hovering, setHovering] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  function handleEnter() {
-    setHovering(true);
-    // Immediately show next image, then cycle
-    setActiveIndex(1);
-    timerRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % images.length);
-    }, 2000);
+  function goTo(index: number) {
+    setActiveIndex(index);
   }
 
-  function handleLeave() {
-    setHovering(false);
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-    setActiveIndex(0);
+  function next() {
+    setActiveIndex((prev) => (prev + 1) % images.length);
+  }
+
+  function prev() {
+    setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
   }
 
   return (
-    <div
-      className="group relative aspect-[16/10] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-xl hover:shadow-[#8C4821]/10"
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
+    <div className="group relative aspect-[16/10] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-xl hover:shadow-[#8C4821]/10">
       {/* All images stacked — crossfade via opacity */}
       {images.map((src, i) => (
         <div
@@ -77,28 +65,56 @@ function ImageCarouselCard({
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-[2]" />
 
+      {/* Navigation arrows */}
+      <button
+        onClick={(e) => { e.stopPropagation(); prev(); }}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-[4] w-7 h-7 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-black/60 hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer"
+        aria-label="Foto anterior"
+      >
+        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); next(); }}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-[4] w-7 h-7 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-black/60 hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer"
+        aria-label="Próxima foto"
+      >
+        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Tap area for mobile (no arrows visible) */}
+      <div
+        className="absolute inset-0 z-[3] md:hidden"
+        onClick={next}
+      />
+
       {/* Bottom info */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 z-[3]">
+      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 z-[5] pointer-events-none">
         <div className="flex items-end justify-between">
           <div>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 font-medium mb-1 group-hover:text-white/80 transition-colors duration-500">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 font-medium mb-1">
               {label}
             </p>
-            <p className="text-[13px] text-white/50 font-light group-hover:text-white/80 transition-colors duration-500">
+            <p className="text-[13px] text-white/50 font-light">
               {caption}
             </p>
           </div>
 
-          {/* Dot indicators — visible on hover */}
-          <div className={`flex gap-1.5 transition-opacity duration-500 ${hovering ? "opacity-100" : "opacity-0"}`}>
+          {/* Dot indicators — always visible */}
+          <div className="flex gap-1.5 pointer-events-auto">
             {images.map((_, i) => (
-              <div
+              <button
                 key={i}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                onClick={() => goTo(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   i === activeIndex
-                    ? "bg-white/80 scale-110"
-                    : "bg-white/25"
+                    ? "bg-white/90 scale-110"
+                    : "bg-white/30 hover:bg-white/50"
                 }`}
+                aria-label={`Foto ${i + 1}`}
               />
             ))}
           </div>

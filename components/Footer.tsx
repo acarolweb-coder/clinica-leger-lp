@@ -14,12 +14,13 @@ export default function Footer() {
         {/* Logo + Nav */}
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 pb-12 border-b border-white/[0.06]">
-            <Image
-              src="/logos/logo-white.png"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logos/logo.svg"
               alt="Dr. Chacur"
-              width={140}
-              height={50}
-              className="object-contain opacity-40 hover:opacity-60 transition-opacity duration-500"
+              width={180}
+              height={38}
+              className="opacity-40 hover:opacity-60 transition-opacity duration-500"
             />
             <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3">
               {NAV_LINKS.map((link) => (
